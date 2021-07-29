@@ -88,8 +88,7 @@ elif [[ $F == 8 ]];then
 clear
 figlet IP SCAN
 read -p "I'll collect the Victim ip! : " i
-nmap--script=asn-query,whois,ip-geolocation-maxmind $i
-
+nmap --script ip-geolocation-geoplugin $i
 elif [[ $F == 9 ]];then
 bash http.sh
 elif [[ $F == 10 ]];then
